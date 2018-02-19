@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+
+    <title>Address - lat_lng</title>
+  </head>
+  <body >
+    <div class="container" style="margin:20px; padding:20px;">
+      <label>Address:</label>
+      <input id="address" type="text" name="address" placeholder="Enter the address...">
+      <button id="getLatLong">Submit</button>
+    </div>
+
+    <div id ="resultsArea" style="display: none" >
+      <div class="container"  style="border:1px solid black;padding:20px;margin:10px">
+        <div class="row">
+<div class="col-xs-4">Formatted address:</div>
+<div class="col-xs-8" ><span id="addressDisplay"></span></div>
+</div><div class="row">
+<div class="col-xs-4">Longitude:</div>
+<div class="col-xs-8" ><span id="long"></span></div>
+</div><div class="row">
+
+<div class="col-xs-4">Latitude:</div>
+<div class="col-xs-8" ><span id="lat"></span></div>
+</div>
+
+</div>
+    </div>
+    <div class="containermap">
+    <div id="map_area">
+
+    </div></div>
+
+  </body>
+
+
+      <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.js"></script>
+      <script type="text/javascript" src="../js/longlat.js"></script>
+      <script type="text/javascript" src="../js/request.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2ssmB4OYp3klzfoEhQFrbIL57NbOcnK4">
+  </script>
+</html>
