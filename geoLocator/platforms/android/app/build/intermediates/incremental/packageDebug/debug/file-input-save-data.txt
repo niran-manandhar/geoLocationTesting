@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Feb 19 17:08:44 EET 2018
+#Mon Feb 19 17:41:32 EET 2018
 25.file=G\:\\SCHOOL\\TASK-1\\geoLocationTesting\\geoLocator\\platforms\\android\\app\\build\\intermediates\\assets\\debug\\www\\js\\jquery-3.3.1.min.js
 41.base=G\:\\SCHOOL\\TASK-1\\geoLocationTesting\\geoLocator\\platforms\\android\\app\\build\\intermediates\\assets\\debug
 25.base=G\:\\SCHOOL\\TASK-1\\geoLocationTesting\\geoLocator\\platforms\\android\\app\\build\\intermediates\\assets\\debug

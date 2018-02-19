@@ -11,22 +11,34 @@
   </head>
   <body >
     <div class="container" style="margin:20px; padding:20px;">
-      <label>Address:</label>
-      <input id="address" type="text" name="address" placeholder="Enter the address...">
-      <button id="getLatLong">Submit</button>
+
+
+
+      <div class="input-group">
+        <input type="text" id="address" class="form-control" placeholder="Enter address">
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button"  id="getLatLong">Submit</button>
+        </div>
+      </div>
+      <div class="input-group">
+
+          <button class="btn btn-primary" type="button"  onclick="getCurrent();">Current Location</button>
+
+      </div>
+
     </div>
 
     <div id ="resultsArea" style="display: none" >
       <div class="container"  style="border:1px solid black;padding:20px;margin:10px">
         <div class="row">
-<div class="col-xs-4">Formatted address:</div>
+<div class="col-xs-4">Formatted address: </div>
 <div class="col-xs-8" ><span id="addressDisplay"></span></div>
 </div><div class="row">
-<div class="col-xs-4">Longitude:</div>
+<div class="col-xs-4">Longitude: </div>
 <div class="col-xs-8" ><span id="long"></span></div>
 </div><div class="row">
 
-<div class="col-xs-4">Latitude:</div>
+<div class="col-xs-4">Latitude: </div>
 <div class="col-xs-8" ><span id="lat"></span></div>
 </div>
 

@@ -11,9 +11,21 @@
   </head>
   <body >
     <div class="container" style="margin:20px; padding:20px;">
-      <label>Address:</label>
-      <input id="address" type="text" name="address" placeholder="Enter the address...">
-      <button id="getLatLong">Submit</button>
+
+
+
+      <div class="input-group">
+        <input type="text" id="address" class="form-control" placeholder="Enter address">
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button"  id="getLatLong">Submit</button>
+        </div>
+      </div>
+      <div class="input-group">
+
+          <button class="btn btn-primary" type="button"  onclick="getCurrent();">Current Location</button>
+
+      </div>
+
     </div>
 
     <div id ="resultsArea" style="display: none" >
@@ -36,8 +48,7 @@
     <div id="map_area">
 
     </div></div>
-<div class="container" id="map_display"  style="border:1px solid black;padding:20px;margin:10px;display:none">
-    </div>
+
   </body>
 
 
