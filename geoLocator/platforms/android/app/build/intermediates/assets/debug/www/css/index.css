@@ -146,3 +146,41 @@ h1 {
    width:200;
    height:200;
  }
+ #right-panel {
+      font-family: 'Roboto','sans-serif';
+      line-height: 30px;
+      padding-left: 10px;
+    }
+
+    #right-panel select, #right-panel input {
+      font-size: 15px;
+    }
+
+    #right-panel select {
+      width: 100%;
+    }
+
+    #right-panel i {
+      font-size: 12px;
+    }
+    #right-panel {
+      height: 100%;
+      float: right;
+      width: 390px;
+      overflow: auto;
+    }
+.boxed{
+  border:1px solid gray;
+  padding:10px;
+  text-align: center;
+  min-height: 100px;
+  margin-top:20px;
+  background-color: white;
+}
+
+.mainnav{
+  margin-top:100px;
+}
+.small{
+  font-size: 8px;
+}

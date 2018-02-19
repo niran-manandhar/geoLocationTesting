@@ -53,7 +53,7 @@ function onSuccess(position) {
   templong=Number(position.coords.longitude);
   templat=Number(position.coords.latitude);
 
-  $('#addressDisplay').html("Your current position");
+
 $('#long').html( position.coords.longitude);
 $('#lat').html( position.coords.latitude);
 $('#resultsArea').show();
