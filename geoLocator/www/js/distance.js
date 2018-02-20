@@ -10,7 +10,7 @@ function getLatLong() {
       callAPI(requestUrl, setOrigin);
       requestUrl = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address_second + "&key=AIzaSyC2ssmB4OYp3klzfoEhQFrbIL57NbOcnK4" ;
       callAPI(requestUrl, setDestination);
-      requestUrl = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + address_first + "&destinations=" + address_second +"&key=AIzaSyBt3uKBhBC3dEBbvgOGkXcKzB8fQilcJDA";
+      requestUrl = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + address_first + "&destinations=" + address_second +"&key=AIzaSyC2ssmB4OYp3klzfoEhQFrbIL57NbOcnK4";
       callAPI(requestUrl, setDistance);
 
 
@@ -94,7 +94,7 @@ $('#map_display').show();
        directionsDisplay.setMap(map);
        directionsDisplay.setPanel(document.getElementById('right-panel'));
 
-        
+
 
          calculateAndDisplayRoute(directionsService, directionsDisplay);
 
