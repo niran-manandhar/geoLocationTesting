@@ -16,13 +16,13 @@ $address=mysql_real_escape_string($_POST["address"]);
 $lat=mysql_real_escape_string($_POST["lat"]);
 $lng=mysql_real_escape_string($_POST["lng"]);
 $type=mysql_real_escape_string($_POST["type"]);
+$image='12.jpg';
 
-
-      			$tempsql = "INSERT INTO `geomarkers` ( `name`, `address`, `lat`, `lng`, `type`) VALUES ('$name',
+      			$tempsql = "INSERT INTO `geomarkers` ( `name`, `address`, `lat`, `lng`, `type`,image) VALUES ('$name',
 '$address',
 '$lat',
 '$lng',
-'$type');";
+'$type','$image');";
 
 			 $result  = mysql_query($tempsql);
 
