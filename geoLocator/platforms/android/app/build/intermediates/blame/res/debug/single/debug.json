@@ -48,6 +48,10 @@
         "source": "G:\\SCHOOL\\TASK-1\\geoLocationTesting\\geoLocator\\platforms\\android\\app\\src\\main\\res\\xml\\config.xml"
     },
     {
+        "merged": "G:\\SCHOOL\\TASK-1\\geoLocationTesting\\geoLocator\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml_provider_paths.xml.flat",
+        "source": "G:\\SCHOOL\\TASK-1\\geoLocationTesting\\geoLocator\\platforms\\android\\app\\src\\main\\res\\xml\\provider_paths.xml"
+    },
+    {
         "merged": "G:\\SCHOOL\\TASK-1\\geoLocationTesting\\geoLocator\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-port-xxhdpi_screen.png.flat",
         "source": "G:\\SCHOOL\\TASK-1\\geoLocationTesting\\geoLocator\\platforms\\android\\app\\src\\main\\res\\drawable-port-xxhdpi\\screen.png"
     },

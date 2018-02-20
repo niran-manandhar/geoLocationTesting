@@ -30,6 +30,7 @@ tempaddress=response.results[0].formatted_address;
 $('#long').html(templong);
 $('#lat').html(templat);
 $('#resultsArea').show();
+$('#myImage').hide();
 
   initMap();
 }
@@ -167,3 +168,5 @@ templocationtitle[DATA[count]["id"]]=DATA[count]["name"];
 $('#savedLocationsDisplayArea').html(markercontent);
 
 }
+
+//photo uploader

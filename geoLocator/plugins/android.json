@@ -12,6 +12,9 @@
     },
     "cordova-plugin-geolocation": {
       "PACKAGE_NAME": "com.testapp.geoLocator"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.testapp.geoLocator"
     }
   },
   "dependent_plugins": {}
