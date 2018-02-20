@@ -5,10 +5,23 @@ var tempaddress;
 function getLatLong() {
   var address = $('#address').val();
       address = address.split(' ').join('+');
+callMap(address);
+}
+
+function callSavedMap(address){
+  $('#savelocationOption').hide();
+
+  $('#savedlocationOptiontext').html( templocationtitle[address]);
+    $('#savedlocationOption').show();
+  var requestUrl = "https://maps.googleapis.com/maps/api/geocode/json?address=" + templocations[address] + "&key=AIzaSyC2ssmB4OYp3klzfoEhQFrbIL57NbOcnK4" ;
+      callAPI(requestUrl, printLongLat);
+}
+function callMap(address){
+  $('#savelocationOption').show();
+  $('#savedlocationOption').hide();
   var requestUrl = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=AIzaSyC2ssmB4OYp3klzfoEhQFrbIL57NbOcnK4" ;
       callAPI(requestUrl, printLongLat);
 }
-
 function printLongLat(response) {
   templong=Number(response.results[0].geometry.location.lng);
   templat=Number(response.results[0].geometry.location.lat);
@@ -37,6 +50,7 @@ $('#map_display').show();
 function docLoaded() {
   document.getElementById("getLatLong").addEventListener('click', getLatLong);
   document.getElementById("saveLocation").addEventListener('click', saveLocation);
+  document.getElementById("getSaved").addEventListener('click', getsaveLocation);
 }
 
 
@@ -84,10 +98,11 @@ function getAddress(response) {
 function onError(error) {
     alert('code: '    + error.code    + '\n' +
           'message: ' + error.message + '\n');
-          getCurrent();
+        //  getCurrent();
 }
 
 var SAVEURL="http://101bits.com/blog/oamkgeoproject/add_markers.php";
+var GETURL="http://101bits.com/blog/oamkgeoproject/getmarkers.php";
 function saveLocation(){
 
   var request = getRequestObject({
@@ -101,14 +116,54 @@ function saveLocation(){
       if (result.RESULT == "SUCCESS") {
 
 
-
+getsaveLocation();
 alert("Marker saved!");
 
 }else{
   alert("Something went wrong.");
 }
 
-      
+
   }, "json");
+
+}
+function getsaveLocation(){
+
+  var request = getRequestObject({
+  });
+  $.post(GETURL, request, function (result) {
+      if (result.RESULT == "SUCCESS") {
+
+displayMarkers(result.DATA);
+
+}else{
+  alert("Something went wrong.");
+}
+
+
+  }, "json");
+
+}
+var templocations=[];
+var templocationtitle=[];
+function displayMarkers(DATA){
+$('#savedLocations').show();
+//$('#resultsArea').hide();
+//$('#map_area').hide();
+$('#savedLocationsDisplayArea').html('');
+var markercontent='';
+
+//alert("ok");
+for(var count=0;count<DATA.length;count++){
+markercontent+='<div class="row markerrow">'
+var targetmarker=DATA[count];
+templocations[DATA[count]["id"]]=DATA[count]["location"];
+var imglocation='';
+imglocation="http://101bits.com/blog/oamkgeoproject/images/"+DATA[count]["image"];
+templocationtitle[DATA[count]["id"]]=DATA[count]["name"];
+  markercontent+='<div class="col-4"><img src="'+imglocation+'" style="height:100px;width:100px"/></div><div class="col-4 savedlocation">'+targetmarker["name"]+'</div><div class="col-4"><div class="btn btn-xs btn-info" onclick="callSavedMap('+targetmarker["id"]+');">View</div></div>';
+  markercontent+='</div>';
+}
+$('#savedLocationsDisplayArea').html(markercontent);
 
 }

@@ -9,7 +9,7 @@ $mysql = mysql_connect(DATABASE_SERVER, DATABASE_USERNAME, DATABASE_PASSWORD) or
 mysql_select_db(DATABASE_NAME);
 
 
-        $tempsql = "SELECT * from geomarkers";
+        $tempsql = "SELECT * from geomarkers order by id desc";
         $result  = mysql_query($tempsql);
         if (!$result) {
 

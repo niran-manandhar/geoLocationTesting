@@ -20,16 +20,29 @@
           <button class="btn btn-primary" type="button"  id="getLatLong">Submit</button>
         </div>
       </div>
-      <div class="input-group">
-
-          <button class="btn btn-primary" type="button"  onclick="getCurrent();">Current Location</button>
+      <div class="input-group btn-group" style="margin-top:5px; margin-bottom:5px">
+             <div class="btn btn-secondary" desabled >Set current location: </div>
+          <button class="btn btn-primary" type="button"  onclick="getCurrent();">GPS Location</button>
 
       </div>
+      <div class="input-group btn-group" style="margin-top:5px; margin-bottom:5px">
+        <div class="btn btn-secondary" desabled >Select saved location: </div>
 
+  <button class="btn btn-primary" type="button"  id="getSaved">View Saved</button>
+
+      </div>
     </div>
-
+<div id="savedLocations" style="display:none">
+<div class="container" style="border:1px solid #333333;margin:10px">
+<div id="savedLocationsDisplayArea">
+</div>
+</div>
+</div>
     <div id ="resultsArea" style="display: none" >
       <div class="container"  style="border:1px solid black;padding:20px;margin:10px">
+        <div class="row" id="savedlocationOption">
+<div class="col-xs-4">Saved as address: </div>
+<div class="col-xs-8" ><span id="savedlocationOptiontext"></span></div></div>
         <div class="row">
 <div class="col-xs-4">Formatted address: </div>
 <div class="col-xs-8" ><span id="addressDisplay"></span></div>
@@ -40,12 +53,14 @@
 
 <div class="col-xs-4">Latitude: </div>
 <div class="col-xs-8" ><span id="lat"></span></div>
-<div class="input-group">
+<div class="input-group" id="savelocationOption">
   <input type="text" id="address_title" class="form-control" placeholder="Enter Saving info.">
   <div class="input-group-append">
+    <button class="btn btn-primary" type="button"  >Image</button>
     <button class="btn btn-primary" type="button"  id="saveLocation">Save Location</button>
   </div>
 </div>
+
 
 </div>
 
