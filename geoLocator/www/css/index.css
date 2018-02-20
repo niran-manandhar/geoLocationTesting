@@ -170,13 +170,15 @@ h1 {
       overflow: auto;
     }
 .boxed{
-  border:1px solid gray;
+
   padding:10px;
   text-align: center;
   min-height: 100px;
   margin-top:20px;
   background-color: white;
+  font-size: 12px;
 }
+
 
 .mainnav{
   margin-top:100px;
