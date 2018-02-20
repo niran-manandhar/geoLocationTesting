@@ -9,8 +9,9 @@ function getLatLong() {
   var requestUrl = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address_first + "&key=AIzaSyC2ssmB4OYp3klzfoEhQFrbIL57NbOcnK4" ;
       callAPI(requestUrl, setOrigin);
     var   requestUrl2 = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address_second + "&key=AIzaSyC2ssmB4OYp3klzfoEhQFrbIL57NbOcnK4" ;
-      callAPI(requestUrl, setDestination);
+      callAPI(requestUrl2, setDestination);
     var   requestUrl3 = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + address_first + "&destinations=" + address_second +"&key=AIzaSyC2ssmB4OYp3klzfoEhQFrbIL57NbOcnK4";
+  callAPI(requestUrl3, setDestination);
 }
 var templong_ori;
 var templat_ori;

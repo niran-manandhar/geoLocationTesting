@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Feb 20 20:36:04 EET 2018
+#Tue Feb 20 20:53:10 EET 2018
 5.base=G\:\\SCHOOL\\TASK-1\\geoLocationTesting\\geoLocator\\platforms\\android\\app\\build\\intermediates\\res\\debug\\resources-debug.ap_
 42.base=G\:\\SCHOOL\\TASK-1\\geoLocationTesting\\geoLocator\\platforms\\android\\app\\build\\intermediates\\assets\\debug
 32.set=ASSET
